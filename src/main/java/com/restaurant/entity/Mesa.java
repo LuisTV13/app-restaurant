@@ -35,9 +35,4 @@ public class Mesa {
 		this.id_tipoest = id_tipoest;
 	}
 	
-
-	
-	
-	
-	
 }
