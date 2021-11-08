@@ -1,12 +1,15 @@
 package com.restaurant.entity;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -15,23 +18,30 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "boleta")
-public class Boleta {
+public class Boleta{
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int idBoleta;
+	private String idBoleta;
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	@Temporal(TemporalType.DATE)
 	private Date fecha_boleta;
+	@ManyToOne
+	@JoinColumn(name = "codigo_so")
 	private Socio codigo_so;
+	@ManyToOne
+	@JoinColumn(name = "cod_mesa")
 	private Mesa cod_mesa;
+	@ManyToOne
+	@JoinColumn(name = "cod_usu")
 	private Usuario cod_usu;
 	
 	
-	public int getIdBoleta() {
+	public String getIdBoleta() {
 		return idBoleta;
 	}
-	public void setIdBoleta(int idBoleta) {
+	public void setIdBoleta(String idBoleta) {
 		this.idBoleta = idBoleta;
 	}
 	public Date getFecha_boleta() {
