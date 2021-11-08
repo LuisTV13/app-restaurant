@@ -17,6 +17,7 @@ public class Socio {
 	private String apellido_so;
 	private String dni_so;
 	private String telefono_so;
+	private String estado_so;
 	
 	
 	public int getCodigo_so() {
@@ -49,6 +50,16 @@ public class Socio {
 	public void setTelefono_so(String telefono_so) {
 		this.telefono_so = telefono_so;
 	}
+	public String getEstado_so() {
+		return estado_so;
+	}
+	public void setEstado_so(String estado_so) {
+		this.estado_so = estado_so;
+	}
+	
+	
+	
+	
 	
 
 }
