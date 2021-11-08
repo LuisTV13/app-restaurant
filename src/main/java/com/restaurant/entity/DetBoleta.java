@@ -17,6 +17,12 @@ import javax.persistence.Table;
 @Table(name = "detboleta")
 public class DetBoleta implements Serializable {
 
+
+
+	/**
+	 * 
+	 */
+
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
