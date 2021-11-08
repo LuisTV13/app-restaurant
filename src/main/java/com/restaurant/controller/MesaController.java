@@ -28,7 +28,7 @@ public class MesaController {
 	@Autowired
 	private MesaService mesaservice;
 	
-	/*@GetMapping("/filtroMesas")
+	@GetMapping("/filtroMesas")
 	@ResponseBody
 	public ResponseEntity<Map<String, Object>> listarMesasPorCodigo(
 			@RequestParam(value = "m_cod",required = false, defaultValue = "0") int m_cod){		
@@ -45,7 +45,7 @@ public class MesaController {
 		    salida.put("mensaje", "Error : "+e.getMessage());			
 		}		
 		return ResponseEntity.ok(salida);
-	}*/
+	}
 	
 	@GetMapping("/listaMesas")
 	@ResponseBody

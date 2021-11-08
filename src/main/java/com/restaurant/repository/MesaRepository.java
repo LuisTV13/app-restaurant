@@ -11,7 +11,7 @@ import com.restaurant.entity.Mesa;
 
 public interface MesaRepository  extends JpaRepository<Mesa, Integer> {
 	
-	/*@Query(" select m from mesa m where "
-			+ "(:m_cod is 0 or m.cod_mesa = :m_cod )")
-	public abstract List<Mesa> listarMesasPorCodigo(@Param("m_cod") int m_cod);*/
+	@Query(" select m from Mesa m where "
+			+ ":m_cod is 0 or m.cod_mesa = :m_cod")
+	public abstract List<Mesa> listarMesasPorCodigo(@Param("m_cod") int m_cod);
 }

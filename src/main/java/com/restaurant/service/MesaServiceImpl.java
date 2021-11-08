@@ -18,10 +18,10 @@ public class MesaServiceImpl implements MesaService {
 	public Mesa registrarMesa(Mesa obj) {		
 		return mesarepo.save(obj);
 	}
-	/*@Override
+	@Override
 	public List<Mesa> listarMesasPorCodigo(int m_cod) {		
 		return mesarepo.listarMesasPorCodigo(m_cod);
-	}*/
+	}
 
 	@Override
 	public List<Mesa> listarMesas() {
