@@ -1,4 +1,4 @@
-package com.cibertec.util;
+package com.restaurant.Constantes;
 
 public class Constantes {
 
