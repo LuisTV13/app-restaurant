@@ -28,7 +28,7 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService Service;
 
-	@GetMapping("/listaReclamoPorDescripcionLike/{nom}")
+	@GetMapping("/listaUsuarioPorDescripcionLike/{nom}")
 	@ResponseBody
 	public ResponseEntity<List<Usuario>> listaReclamoPorDescripcionLike(@PathVariable("nom") String nombre_usu) {
 
