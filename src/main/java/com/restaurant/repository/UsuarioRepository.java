@@ -10,7 +10,7 @@ import com.restaurant.entity.Usuario;
 
 public interface UsuarioRepository  extends JpaRepository<Usuario, Integer> {
 	// Para Consulta
-		@Query("select d from tb_usuario d where "
+		@Query("select d from Usuario d where "
 				+ "( :p_cod_Ingreso is '' or d.cod_Ingreso = :p_cod_Ingreso ) and "
 				+ "( :p_clave_usuario is '' or d.clave_usuario like :p_clave_usuario ) ")
 		public abstract List<Usuario> consultaUsuarioPorCodClaveIngreso(
@@ -18,8 +18,13 @@ public interface UsuarioRepository  extends JpaRepository<Usuario, Integer> {
 									 	@Param("p_clave_usuario") String clave_usuario);
 		
 		//Para el CRUD
-		public List<Usuario> findByCod_Ingreso(String cod_Ingreso);
-		public List<Usuario> findByNombre_usu(String nombre_usu);
-		public List<Usuario> findByNombre_usuLike(String nombre_usu);
+		/*@Query("select d from Usuario d where "
+				+ "( :p_cod_usu is 0 or d.cod_usu = :p_cod_usu ) ")
+		public List<Usuario> buscarPorCod_usu(int cod_usu);*/
+		
+		public List<Usuario> findByEstado(int estado);
+		
+		@Query("select d from Usuario d where (:nom is '' or d.nombre_usu like :nom)")
+		public List<Usuario> findByNombre_usuLike(@Param("nom") String nombre_usu);
 	
 }

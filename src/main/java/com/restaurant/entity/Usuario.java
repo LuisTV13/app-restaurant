@@ -16,14 +16,14 @@ public class Usuario {
 	private String apellido_usu;
 	private String cod_Ingreso;
 	private String clave_usuario;
-	private String Estado;
+	private int estado;
 	
 	
-	public String getEstado() {
-		return Estado;
+	public int getEstado() {
+		return estado;
 	}
-	public void setEstado(String estado) {
-		Estado = estado;
+	public void setEstado(int estado) {
+		this.estado = estado;
 	}
 	public int getCod_usu() {
 		return cod_usu;
