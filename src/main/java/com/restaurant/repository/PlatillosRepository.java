@@ -17,7 +17,7 @@ public interface PlatillosRepository extends JpaRepository<Platillos, Integer> {
 	public abstract List<Platillos> listarPlatilloPorInicial(@Param ("p_nom") String detalle_pro);
 	
 	
-	
+
 	
 	
 	
